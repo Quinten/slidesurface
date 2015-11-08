@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="True" />
+    <title>9 thumbnails for a book</title>
+    <style>
+      body { margin: 0; background: #000000; }
+    </style>
+  </head>
+  <body>
+    <script src="_js/slidesurface.js"></script>
+    <script>
+    var myImages =  ['img/DSC00277.JPG',
+                     'img/DSC00278.JPG',
+                     'img/DSC00280.JPG',
+                     'img/DSC00453.JPG',
+                     'img/DSC00468.JPG',
+                     'img/DSC00513.JPG',
+                     'img/IMAG0010.jpg',
+                     'img/IMAG0031.jpg',
+                     'img/IMAG0038.jpg'
+					];
+    
+    if ( document.readyState === 'complete' ) {
+      surface.load(myImages);
+    } else {
+      window.onload = function () {
+        surface.load(myImages);
+      }
+    }
+    </script>
+  </body>
+</html>
