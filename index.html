@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="True" />
+    <title>slide surface</title>
+    <style>
+      body { margin: 0; background: #000000; }
+    </style>
+  </head>
+  <body>
+    <script src="_js/slidesurface.js"></script>
+    <script>
+    var myImages =  ['img/DSC00277.JPG',
+                     'img/DSC00278.JPG',
+                     'img/DSC00280.JPG',
+                     'img/DSC00453.JPG',
+                     'img/DSC00468.JPG',
+                     'img/DSC00513.JPG',
+                     'img/IMAG0010.jpg',
+                     'img/IMAG0031.jpg',
+                     'img/IMAG0038.jpg',
+                     'img/IMAG0055.jpg',
+                     'img/IMAG0061.jpg',
+                     'img/IMAG0072.jpg',
+                     'img/IMAG0089.jpg',
+                     'img/IMAG0090.jpg',
+                     'img/IMAG0091.jpg',
+                     'img/IMAG0093.jpg',
+                     'img/IMAG0095.jpg',
+                     'img/IMAG0099.jpg',
+                     'img/IMAG0100.jpg',
+                     'img/IMAG0101.jpg',
+                     'img/IMAG0102.jpg',
+                     'img/IMAG0103.jpg',
+                     'img/IMAG0104.jpg',
+                     'img/IMAG0106.jpg',
+                     'img/IMAG0107.jpg',
+                     'img/IMAG0108.jpg',
+                     'img/IMAG0108_2.jpg',
+                     'img/IMAG0110.jpg',
+                     'img/IMAG0114.jpg',
+                     'img/IMAG0118.jpg',
+                     'img/IMAG0119.jpg',
+                     'img/IMAG0120.jpg',
+                     'img/IMAG0132.jpg',
+                     'img/IMAG0145.jpg',
+                     'img/IMAG0157.jpg',
+                     'img/IMAG0166.jpg',
+                     'img/IMAG0169.jpg',
+                     'img/IMAG0186_edit0.jpg',
+                     'img/IMAG0189.jpg',
+                     'img/IMAG0192.jpg',
+                     'img/IMAG0197.jpg',
+                     'img/IMAG0204.jpg',
+                     'img/IMAG0211.jpg',
+                     'img/IMAG0227.jpg',
+                     'img/IMAG0262.jpg'  
+                    ];
+    
+    if ( document.readyState === 'complete' ) {
+      surface.load(myImages);
+    } else {
+      window.onload = function () {
+        surface.load(myImages);
+      }
+    }
+    </script>
+  </body>
+</html>
