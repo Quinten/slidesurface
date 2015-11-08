@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>256 random flickr 'windows' keyword search results in a slidesurface</title>
+    <style>
+      body { margin: 0; background: #000000; }
+    </style>
+  </head>
+  <body>
+    <script src="_js/slidesurface.js"></script>
+    <script>
+    var flickr = {};
+    flickr.setup = function () {
+      var request = new XMLHttpRequest();
+      request.open("GET", 'http://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=xxx&text=windows&per_page=256&format=json&nojsoncallback=1', true);
+      request.onreadystatechange = function () {
+        if (request.readyState === 4 && request.status === 200) {
+          var response = JSON.parse(request.responseText);
+           var images = [];
+           for (var i = 0; i < response.photos.photo.length; i++) {
+             images[i] = "http://farm" + response.photos.photo[i].farm + ".staticflickr.com/" + response.photos.photo[i].server + "/" + response.photos.photo[i].id + "_" + response.photos.photo[i].secret + "_z.jpg";
+           }
+           surface.load(images);
+        }
+      }
+      request.send(null);      
+    }
+    
+    if(document.readyState === 'complete'){
+      flickr.setup();
+    } else {
+      window.onload = function (){
+        flickr.setup();
+      }
+    }
+    </script>
+  </body>
+</html>
